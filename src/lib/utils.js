@@ -1,0 +1,4 @@
+export const filterHotelsByCountry = hotels => hotels.filter(hotel => hotel.country === filters.country || filters.country === undefined || filters.country === 'Todos los países')
+export const filterHotelsByPrice = hotels => hotels.filter(hotel => hotel.price == filters.price || filters.price === undefined || filters.price === 'Cualquier precio')
+export const filterHotelsByRooms = hotels => hotels.filter(hotel => (filters.rooms - 10 <= hotel.rooms && hotel.rooms <= filters.rooms) || filters.rooms === undefined || filters.rooms === 'Cualquier tamaño')
+export const filterHotelsByAvailabilty = hotels => hotels.filter(hotel => hotel.availabilityFrom <= filters.dateFrom && hotel.availabilityTo >= filters.dateTo)
