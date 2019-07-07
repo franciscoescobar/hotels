@@ -27,7 +27,6 @@ const App = () => {
         "https://wt-8a099f3e7c73b2d17f4e018b6cfd6131-0.sandbox.auth0-extend.com/acamica"
       );
       const json = await response.json();
-      console.log(json);
       setState({ hotels: json, loading: false, filteredHotels: json });
     } catch (error) {
       console.log(error);
@@ -68,7 +67,7 @@ const App = () => {
         hotel.availabilityTo >= filters.dateTo
     );
     setState({ filteredHotels });
-  }, [filters]);
+  }, [filters, hotels]);
 
   return (
     <div>
