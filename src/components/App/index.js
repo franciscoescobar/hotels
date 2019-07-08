@@ -9,8 +9,8 @@ const App = () => {
     (state, newState) => ({ ...state, ...newState }),
     {
       filters: {
-        dateFrom: new Date(),
-        dateTo: new Date(new Date().valueOf() + 86400000),
+        dateFrom: new Date(new Date().valueOf() + 86400000),
+        dateTo: new Date(new Date().valueOf() + 86400000 + 86400000),
         country: undefined,
         price: undefined,
         rooms: undefined
